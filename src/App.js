@@ -38,21 +38,33 @@ class App extends Component {
      else{
       return(
         <div className="App">
+          
+<div class="col-md-4">
+  <div class="product-item">
+    <div class="down-content">
+      
+ 
           <h1 class="topic">The New York Times best-selling books list</h1>
             <ul class="list">
             { items.map((item,index ) =>
+
+
                 <div class="row">
-                   <img style={{width: 175, height: 175}}  src={item.book_image}  />
-                  <div class="col-sm"><li key={index}>{ item.rank }</li><hr/></div>
-                  <div class="col-sm"><li key={index}>{ item.title }</li></div>
-                  <div class="col-sm"><li key={index}>{ item.author }</li></div>
-                  <div class="col-sm"><br/></div>
-      
+                  <div class="col-6 col-md-4">
+                   <img style={{width: 300, height: 300}}  src={item.book_image}  />
                   </div>
+                  <div class="col-6 col-md-4"><li key={index}>{ item.rank }</li><hr/></div>
+                  <div class="col-6 col-md-4"><li key={index}>{ item.title }</li></div>
+                  <div class="col-6 col-md-4"><li key={index}>{ item.author }</li></div>
+                  <div class="col-6 col-md-4"><br/></div>
+                </div>
                )
               }
             </ul>
         </div>
+        </div>
+  </div>
+</div>
       );
     }
   } 
